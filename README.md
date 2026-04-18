@@ -6,7 +6,7 @@ Analyze network traffic to identify normal baselines and abnormal behavior to de
 
 Tools Used
 
-Wireshark
+- Wireshark
 
 Methodology
 

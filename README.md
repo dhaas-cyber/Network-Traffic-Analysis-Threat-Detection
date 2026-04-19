@@ -28,13 +28,6 @@ Skills Learned
 - Network traffic analysis and packet inspection
 - The ability to distinguish normal network patterns from potential security events
 
-drag & drop screenshots here or use imgur and reference them using imgsrc
-
-Every screenshot should have some text explaining what the screenshot is about.
-
-Example below.
-
-Ref 1: Network Diagram
 
 <img width="1013" height="708" alt="Screenshot 2025-09-10 135902" src="https://github.com/user-attachments/assets/b9b31a78-f25f-4c28-bed2-00d93c12caac" />
 

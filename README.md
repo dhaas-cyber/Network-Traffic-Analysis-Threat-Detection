@@ -2,37 +2,71 @@
 
 Objective
 
-Analyze network traffic to identify normal baselines and abnormal behavior to detect potential indicators of compromise using packet inspection techniques.
+Analyze network traffic to establish a baseline of normal activity and identify deviations that may indicate malicious behavior. This project focused on practicing packet inspection and IDS alert triage techniques commonly performed by SOC analysts to differentiate benign traffic from potentially actionable security events.
 
 Tools Used
 
-- Wireshark
-- Snorby
+- Wireshark - packet capture, filtering, and protocol analysis
+- Snorby (Snort IDS interface) - monitoring and reviewing intrusion detection alerts
+
+Environment
+
+- Traffic captured from a controlled lab environment
+- Analysis performed over a defined capture window during normal system activity
 
 Methodology
 
-- Captured and analyzed network traffic using packet analysis tools
-- Filtered traffic by IP addresses, ports, and protocols to isolate activity
-- Examined normal network behavior
-- Investigated IDS alerts to identify potentially suspicious connections
-- Correlated packet data with alert information to understand network activity patterns
+Traffic Baseline Analysis
+
+- Captured network traffic and applied protocol, IP, and port-based filters in Wireshark
+- Identified and documented common baseline traffic patterns, including:
+    - DHCP communication
+    - Broadcast and ARP traffic
+    - Normal TCP/UDP activity associated with routine system operations
+- Used protocol statistics and packet inspection to understand expected network behavior
+
+Alert Review & Investigation
+
+- Reviewed IDS alerts generated in Snorby during the capture period
+- Examined alert metadata such as:
+    - Source and destination IP addresses
+    - Ports and protocols involved
+    - Signature descriptions and alert priority
+- Correlated IDS alerts with packet-level data in Wireshark to evaluate whether alerts aligned with:
+    - Legitimate network activity
+    - Misconfigurations or noise
+    - Potentially suspicious or unauthorized connections
+
+ Analysis & Decision-Making
+
+ - Compared flagged traffic against established baseline behavior
+ - Determined which alerts represented false positives versus activity requiring further investigation
+ - Practiced analyst judgment by focusing on context rather than alert volume alone
 
 Key Findings
 
-- Identified normal network traffic patterns, including DHCP and broadcast communications
-- Detected IDS alerts indicating potential unauthorized connection attempts
-- Differentiated between baseline network activity and flagged suspicious behavior
+- Established a baseline of normal network activity, including DHCP and routine broadcast communications
+- Identified IDS alerts indicating potential unauthorized connection attempts
+- Differentiated benign alerts from suspicious behavior by correlating IDS data with packet inspection
+- Reinforced the importance of context and baseline knowledge when evaluating alerts in a SOC environment
 
-Skills Learned
-
-- Network traffic analysis and packet inspection
-- The ability to distinguish normal network patterns from potential security events
-
+Evidence
 
 <img width="1013" height="708" alt="Screenshot 2025-09-10 135902" src="https://github.com/user-attachments/assets/b9b31a78-f25f-4c28-bed2-00d93c12caac" />
 
-- Wireshark use demonstrating normal network traffic patterns
+- Wireshark Screenshot: Demonstrates normal network traffic patterns and protocol distribution used to establish baseline behavior.
 
 <img width="992" height="720" alt="SNORBY" src="https://github.com/user-attachments/assets/4f3edb62-3d8a-402d-afad-7c0787fd8dbd" />
 
-- Snorby use demonstrating potential malicious activity
+- Snorby Screenshot: Highlights IDS alerts reviewed during analysis, including signatures and source/destination details used to evaluate risk
+
+Skills Demonstrated
+
+- Network traffic analysis and packet inspection
+- IDS alert triage and correlation
+- Identifying false positives versus potential security incidents
+- Understanding baseline network behavior and deviations
+- Applying analyst judgment within a SOC-style workflow
+
+
+

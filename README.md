@@ -46,7 +46,7 @@ Alert Review & Investigation
 Key Findings
 
 - Established a baseline of normal network activity, including DHCP and routine broadcast communications
-- Identified IDS alerts indicating potential unauthorized connection attempts
+- Identified IDS alerts triggered by abnormal traffic patterns and evaluated them to determine whether they represented benign activity or required further investigation
 - Differentiated benign alerts from suspicious behavior by correlating IDS data with packet inspection
 - Reinforced the importance of context and baseline knowledge when evaluating alerts in a SOC environment
 
@@ -59,6 +59,13 @@ Evidence
 <img width="992" height="720" alt="SNORBY" src="https://github.com/user-attachments/assets/4f3edb62-3d8a-402d-afad-7c0787fd8dbd" />
 
 - Snorby Screenshot: Highlights IDS alerts reviewed during analysis, including signatures and source/destination details used to evaluate risk
+
+Alert Example
+
+- Signature: Suspicious DHCPv6 Repeat Request Activity
+- Trigger: Repeated DHCPv6 solicit messages sent to multicast address ff02::1:2
+- Analysis: Packet capture in Wireshark shows multiple DHCPv6 solicit and advertise messages between a local host and the multicast DHCP server. While DHCP traffic is expected, the frequency of requests is higher than typical baseline behavior
+- Outcome: Determined to be a false positive due to normal lab activity, not malicious traffic
 
 Skills Demonstrated
 

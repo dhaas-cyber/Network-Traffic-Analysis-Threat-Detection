@@ -1,20 +1,20 @@
 # Network Traffic Analysis & Threat Detection
 
-Objective
+**Objective**
 
 Analyze network traffic to establish a baseline of normal activity and identify deviations that may indicate malicious behavior. This project focused on practicing packet inspection and IDS alert triage techniques commonly performed by SOC analysts to differentiate benign traffic from potentially actionable security events.
 
-Tools Used
+**Tools Used**
 
 - Wireshark - packet capture, filtering, and protocol analysis
 - Snorby (Snort IDS interface) - monitoring and reviewing intrusion detection alerts
 
-Environment
+**Environment**
 
 - Traffic captured from a controlled lab environment
 - Analysis performed over a defined capture window during normal system activity
 
-Methodology
+**Methodology**
 
 Traffic Baseline Analysis
 
@@ -43,14 +43,14 @@ Alert Review & Investigation
  - Determined which alerts represented false positives versus activity requiring further investigation
  - Practiced analyst judgment by focusing on context rather than alert volume alone
 
-Key Findings
+**Key Findings**
 
 - Established a baseline of normal network activity, including DHCP and routine broadcast communications
 - Identified IDS alerts triggered by abnormal traffic patterns and evaluated them to determine whether they represented benign activity or required further investigation
 - Differentiated benign alerts from suspicious behavior by correlating IDS data with packet inspection
 - Reinforced the importance of context and baseline knowledge when evaluating alerts in a SOC environment
 
-Evidence
+**Evidence**
 
 <img width="1013" height="708" alt="Screenshot 2025-09-10 135902" src="https://github.com/user-attachments/assets/b9b31a78-f25f-4c28-bed2-00d93c12caac" />
 
@@ -60,14 +60,14 @@ Evidence
 
 - Snorby Screenshot: Highlights IDS alerts reviewed during analysis, including signatures and source/destination details used to evaluate risk
 
-Alert Example
+**Alert Example**
 
 - Signature: Suspicious DHCPv6 Repeat Request Activity
 - Trigger: Repeated DHCPv6 solicit messages sent to multicast address ff02::1:2
 - Analysis: Packet capture in Wireshark shows multiple DHCPv6 solicit and advertise messages between a local host and the multicast DHCP server. While DHCP traffic is expected, the frequency of requests is higher than typical baseline behavior
 - Outcome: Determined to be a false positive due to normal lab activity, not malicious traffic
 
-Skills Demonstrated
+**Skills Demonstrated**
 
 - Network traffic analysis and packet inspection
 - IDS alert triage and correlation
